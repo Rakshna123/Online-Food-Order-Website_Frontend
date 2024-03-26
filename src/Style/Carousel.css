@@ -1,0 +1,11 @@
+body{
+    /* font-family: 'Times New Roman', Times, serif; */
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.detailImage{
+    height: 650px;
+    width: 80%;
+}

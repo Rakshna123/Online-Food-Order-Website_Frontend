@@ -1,0 +1,42 @@
+/* .top:hover{
+    background-color: maroon; */
+/* } */
+.head{
+    color:darkblue;
+    /* z-index: 3; */
+    font-weight: bolder;
+}
+.subheading{
+    color: black;  
+}
+.content{
+    color:rgba(128, 0, 128, 0.948);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* order button */
+.order{
+    background-color: black;
+    padding: 10px;
+    width: 280px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 4px 6px 5px 4px gray;
+    border-radius: 15px;
+    float: right;
+}
+.order:hover{
+    transform: scale(1.1);
+    background-color: red;
+}
+.line{
+    margin-left: 0px;
+    font-size: 50px;
+}
+.line:hover{
+    transform: scale(0.9);
+    color: red;
+}
+
+
