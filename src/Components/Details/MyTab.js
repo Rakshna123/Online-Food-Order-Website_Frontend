@@ -9,7 +9,7 @@ export default function () {
   const id = parsed.restaurant;
   console.log(id);
   useEffect(() => {
-    axios.get(`http://localhost:8300/restById/${id}`)
+    axios.get(`https://online-food-order-website-backend-1.onrender.com/restById/${id}`)
       .then((res) => {
         setRestaurant(res.data);
       })
