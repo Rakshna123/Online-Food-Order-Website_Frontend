@@ -14,7 +14,7 @@ export default function WallPaper() {
 
   useEffect(()=>{
   
-    axios.get('http://localhost:8300/getAllLocation')
+    axios.get('https://online-food-order-website-backend-1.onrender.com/getAllLocation')
     .then((res)=>{
       setLocation(res.data);
     })
@@ -27,7 +27,7 @@ export default function WallPaper() {
   const handleLocation = (e) =>{
     var locationId = e.target.value;
     sessionStorage.setItem("locationID",Number(locationId));
-    axios.get(`http://localhost:8300/locationId/${locationId}`)
+    axios.get(`https://online-food-order-website-backend-1.onrender.com/locationId/${locationId}`)
     .then((res)=>{
       setRestaurants(res.data);
     })
