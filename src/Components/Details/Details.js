@@ -35,14 +35,14 @@ export default function Details() {
   const id = parsed.restaurant;
 
   useEffect(() => {
-    axios.get(`http://localhost:8300/restById/${id}`)
+    axios.get(`https://online-food-order-website-backend-1.onrender.com/restById/${id}`)
       .then((res) => {
         setRestaurant(res.data);
       })
       .catch((error) => {
         console.error(error);
       });
-        axios.get(`http://localhost:8300/getmenuList/${restaurant.name}`)
+        axios.get(`https://online-food-order-website-backend-1.onrender.com/getmenuList/${restaurant.name}`)
           .then((res) => {
             setSelectedMenu(res.data);
           })
@@ -53,7 +53,7 @@ export default function Details() {
   
   const gallaryOpen = () => {
     setGallaryIsOpen(true);
-    axios.get(`http://localhost:8300/getmenuList/${restaurant.name}`)
+    axios.get(`https://online-food-order-website-backend-1.onrender.com/getmenuList/${restaurant.name}`)
       .then((res) => {
         setSelectedMenu(res.data);
         // setGallaryIsOpen(true);
