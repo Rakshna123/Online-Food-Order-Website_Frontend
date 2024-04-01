@@ -21,7 +21,7 @@ export default function Filter() {
     const location_id = Number(sessionStorage.getItem('locationID'));
 
     const fetchLocation = () => {
-        axios.get('http://localhost:8300/getAllLocation')
+        axios.get('https://online-food-order-website-backend-1.onrender.com/getAllLocation')
             .then((res) => 
                 setLocationData(res.data))
             .catch((err) => console.log(err))
@@ -40,14 +40,14 @@ export default function Filter() {
             highCost: highCost
         }
 
-        axios.get(`http://localhost:8300/mealTypeId/${mealtype_id}`)
+        axios.get(`https://online-food-order-website-backend-1.onrender.com/mealTypeId/${mealtype_id}`)
         .then((res)=>{
             setRestaurantData(res.data);
         })
         .catch(err=>err)
         console.log(restaurantData);
 
-        axios.post("http://localhost:8300/filteroptions",filteredObj)
+        axios.post("https://online-food-order-website-backend-1.onrender.com/filteroptions",filteredObj)
         .then((res)=>{
             setRestaurantData(res.data);
         })
@@ -68,7 +68,7 @@ export default function Filter() {
             highCost: highCost
         }
 
-        axios.post("http://localhost:8300/filteroptions",filteredObj)
+        axios.post("https://online-food-order-website-backend-1.onrender.com/filteroptions",filteredObj)
             .then(res => setRestaurantData(res.data))
             .catch(err => console.log(err))
         }
@@ -83,7 +83,7 @@ export default function Filter() {
                 highCost: highCost
             }
 
-        axios.post("http://localhost:8300/filteroptions", filteredObj)
+        axios.post("https://online-food-order-website-backend-1.onrender.com/filteroptions", filteredObj)
             .then(res => setRestaurantData(res.data))
             .catch(err => console.log(err))
         }
