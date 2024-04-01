@@ -13,7 +13,7 @@ export default function SearchItems() {
   const navigate = useNavigate();
 
   useEffect(()=>{
-     axios.get(`http://localhost:8300/getAllMealTypes`)
+     axios.get(`https://online-food-order-website-backend-1.onrender.com/getAllMealTypes`)
      .then((res) => setMealtype(res.data))
      .catch((err) => err);
 }, [])
