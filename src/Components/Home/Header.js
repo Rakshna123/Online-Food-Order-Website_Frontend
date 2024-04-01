@@ -99,7 +99,7 @@ const Header = () => {
     };
 
     axios
-      .post('http://localhost:8300/signin', data)
+      .post('https://online-food-order-website-backend-1.onrender.com//signin', data)
       .then(res => {
         setLogin(true);
         sessionStorage.setItem('user', res.data.user.username);
@@ -120,7 +120,7 @@ const Header = () => {
     };
 
     axios
-      .post('http://localhost:8300/signup', data)
+      .post('https://online-food-order-website-backend-1.onrender.com/signup', data)
       .then(res => setSignUser(res.data))
       .catch(err => console.error('Signup failed:', err));
       accountClose();
